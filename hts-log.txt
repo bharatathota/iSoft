@@ -1,0 +1,22 @@
+HTTrack3.49-2 launched on Mon, 02 Feb 2026 23:16:14 at https://www.isoftservices.io/
+(httrack https://www.isoftservices.io/ -O /Users/bharatathota/Desktop/Bharat )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+23:16:58	Error: 	"Not Found" (404) at link https://www.isoftservices.io/t (from https://www.isoftservices.io/)
+23:16:58	Error: 	"Not Found" (404) at link https://www.isoftservices.io/e (from https://www.isoftservices.io/)
+23:17:01	Error: 	"Bad Request" (400) at link https://www.isoftservices.io/window.location.href (from https://www.isoftservices.io/)
+23:17:01	Warning: 	Moved Permanently for https://www.isoftservices.io/api/
+23:17:01	Warning: 	File has moved from https://www.isoftservices.io/api/ to https://www.isoftservices.io/api
+23:17:02	Warning: 	Moved Permanently for https://www.isoftservices.io/envelope/
+23:17:02	Warning: 	File has moved from https://www.isoftservices.io/envelope/ to https://www.isoftservices.io/envelope
+23:17:03	Error: 	"Not Found" (404) at link https://www.isoftservices.io/feed.xml (from https://www.isoftservices.io/)
+23:17:03	Error: 	"Bad Request" (400) at link https://www.isoftservices.io/decodeURIComponent(e (from https://www.isoftservices.io/)
+23:17:03	Error: 	"Not Found" (404) at link https://www.isoftservices.io/api (from https://www.isoftservices.io/api/)
+23:17:03	Error: 	"Not Found" (404) at link https://www.isoftservices.io/envelope (from https://www.isoftservices.io/envelope/)
+
+HTTrack Website Copier/3.49-2 mirror complete in 49 seconds : 31 links scanned, 21 files written (13411744 bytes overall) [2956745 bytes received at 60341 bytes/sec], 13427513 bytes transferred using HTTP compression in 29 files, ratio 21%
+(7 errors, 4 warnings, 0 messages)
