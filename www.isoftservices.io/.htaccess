@@ -1,0 +1,28 @@
+# ── PHP engine ──────────────────────────────────────────────────────────────
+AddType application/x-httpd-php .php
+
+# ── Default document ────────────────────────────────────────────────────────
+DirectoryIndex index.php index.html
+
+# ── Clean URLs (no .php / .html extensions) ─────────────────────────────────
+RewriteEngine On
+
+# 1. Redirect /page.php  → /page  (301 canonical)
+RewriteCond %{THE_REQUEST} \s/+([^.]+)\.php[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L,NE]
+
+# 2. Redirect /page.html → /page  (301 canonical)
+RewriteCond %{THE_REQUEST} \s/+([^.]+)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L,NE]
+
+# 3. Serve /page → /page.php  (internal rewrite, no redirect)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^([^.]+)$ $1.php [L]
+
+# 4. Fallback: /page → /page.html  (for any remaining static html files)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^([^.]+)$ $1.html [L]
